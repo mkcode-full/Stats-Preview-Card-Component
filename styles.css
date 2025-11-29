@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-navy: hsl(233, 47%, 7%);
+    --clr-blue: hsl(244, 37%, 16%);
+    --clr-purple: hsl(277, 64%, 61%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-white-75: hsla(0, 0%, 100%, 0.75);
+    --clr-white-60: hsla(0, 0%, 100%, 0.6);
+
+    --ff-inter: 'Inter', sans-serif;
+    --ff-lexend: 'Lexend Deca', sans-serif;
+    --fs-body: 15px;
+}
+
+body {
+    background-color: var(--clr-navy);
+    font-family: var(--ff-inter);
+    font-size: var(--fs-body);
+    color: var(--clr-white);
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--clr-blue);
+    border-radius: 12px;
+    overflow: hidden;
+
+}
+
+.content-wrapper {
+    width: 50%;
+    padding: 60px;
+}
+
+.card-image {
+    width: 50%;
+    background-color: var(--clr-purple);
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+}
+
+.content-title {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.content-title span {
+    color: var(--clr-purple);
+
+}
+
+.content-text {
+    font-size: 13px;
+    color: var(--clr-white-60);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.item {
+    display: flex;
+    flex-direction: column; /* Sayı üstte, label altta */
+}
+
+.card-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.item-number {
+    font-family: var(--ff-lexend);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.item-label {
+    color: var(--clr-white-60);
+    font-size: 10px;
+    line-height: 2.5;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        flex-direction: column-reverse;
+    }
+}
